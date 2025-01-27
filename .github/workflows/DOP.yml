@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch: # Permite ejecutar manualmente el flujo
 
 jobs:
   build:
@@ -26,3 +27,7 @@ jobs:
       # 3. Instalar dependencias
       - name: Install dependencies
         run: npm install
+
+      # 4. Mensaje de confirmación
+      - name: Confirm Build
+        run: echo "Build completado correctamente"
